@@ -7,7 +7,7 @@ var url = urlBase + layer + '.jsonp';
 
 wax.tilejson (url, function(tilejson) {
     tilejson.minzoom = 8;
-      tilejson.maxzoom = 16;
+      tilejson.maxzoom = 17;
 m = new mm.Map('mymap', new wax.mm.connector(tilejson), null, [
         new mm.MouseHandler(),
         new mm.TouchHandler()
