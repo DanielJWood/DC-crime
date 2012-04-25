@@ -23,18 +23,21 @@ h2 {
 }
 
 p {
-	font-size:16px;
-	color: rgba(255,247,188,1);
-	;
+    font-size:16px;
+    color: rgba(255,247,188,1);
+    ;
 }
-
+    
 a {
   color: rgba(254,153,41,0.7);
   text-decoration: none;
-}
+  }
 a:hover {
+  text-decoration: none;
+  }
+.wax-legends a:hover {
   text-decoration: underline;
-}
+  }
 
 .source { font-size: 80%; }
 
@@ -49,7 +52,7 @@ a:hover {
 	padding-left:15px;
 	padding-top:9px;
 }
-   
+
 
 /*About section
 #about {
@@ -70,6 +73,7 @@ a:hover {
 	width:100%;
 	top:0;
 	left:0;
+	background-color:rgb(2,2,0);
 	background-color:rgba(2,2,0,0.82);
 	z-index:0;
 }
@@ -85,47 +89,50 @@ a:hover {
 	margin:0;
 	overflow: visible;
 	/*padding-left:10px;*/
-}
-
+  }
 .layerswitcher {
-	top:0;
-	height:370px;
-	padding-left:10px;
-	/*border-left:2px solid rgba(255,247,188,1);*/
-	
-}
+  height:370px;
+  padding-left:10px;
+  /*border-left:2px solid rgba(255,247,188,1);*/
+  }
+.border-bar {
+  background-color: #FFF7BC;
+  width: 2px;
+  height: 335px;
+  position: absolute;
+  left: 230px;
+  top: 35px;
+  }
+#assault.border-bar   { top: 70px; height: 300px; }
+#arson.border-bar     { top: 105px; height: 265px;}
+#burglary.border-bar  { top: 140px; height: 230px;}
+#homicide.border-bar  { top: 175px; height: 195px;}
+#robbery.border-bar  { top: 210px; height: 160px;}
+#sexual.border-bar  { top: 245px; height: 125px;}
+#cars.border-bar  { top: 280px; height: 90px;}
+#theft.border-bar  { top: 315px; height: 55px;}
 
+ 
 .layerswitcher li { 
-	float:left;
 	padding-top:5px;
 	padding-left: 0px;
 	padding-right:40px;
 	}
-
 .layerswitcher li a {
-	font-size:30px;
-	top:0;
-	z-index:0;
-	text-align: center;
-	/* border-bottom:1px solid rgba(255,247,188,1); */
-	padding: 0px 10px;
 	display: block;
-}
-
-
-.layerswitcher li a:hover {
-	color: rgba(255,247,188,1);
-	text-decoration:none;
-	padding-left:50px;
-}
+	font-size:30px;
+	z-index:0;
+	padding: 0px 10px;
+	}
+	.layerswitcher li a:hover {
+		color: rgba(255,247,188,1);
+		}
 
 .layerswitcher li a.active {
 	background-color:rgba(46,46,45,0.0);
-	color: rgba(255,247,188,1);
-	text-decoration:none;
-	padding-left:50px;
-	border-bottom:2px solid rgba(255,247,188,1);	
-}
+	color: rgb(255,247,188);
+	border-bottom:2px solid rgb(255,247,188);
+  }
 .layerswitcher li.first-child a {
     padding-left: 0px;} /*why doesn't this work?*/
 
@@ -134,26 +141,7 @@ a:hover {
 	border-top:2px solid rgba(255,247,188,1);
 	height:100%;
 	background-color:rgba(2,2,0,0.3);	
-}
-/*
-.borderbar {
-	position:absolute;
-	top:0px;
-	left:10px;
-	height:370px;
-	width:2px;
-	border-left:2px solid rgba(255,247,188,1);
-}*/
-
-.borderbar {
-	position:absolute;
-	top:246px;
-	left:221px;
-	height:125px;
-	width:2px;
-	border-left:2px solid rgba(255,247,188,1);
-}
-
+  }
 
 /*Map*/
 #mymap {
