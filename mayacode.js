@@ -3,14 +3,14 @@ var m, interaction;
 var layer = 'danwood.crime10hex';
 var legend;
 
-//should i include lat, lon, z?
-//function buildMap(layers, lat, lon, z, l) {
-
 function buildMap(layer) {
 	wax.tilejson(url + layer + '.jsonp', function(tilejson) {
 	var m = new MM.Map('mymap', new wax.mm.connector(tilejson));
 
-	$('.wax-legend, .wax-tooltip').remove();
+	$('.wax-legend').remove(); //the legend stacks with the build so needs to be removed first.
+	$('a.zoomer').hide(); //i remove the zoomer because it is transparent, and stacks
+	$('a.wax-tooltip').remove();
+  
 
 	interaction = wax.mm.interaction()
 	  .map(m)
@@ -31,11 +31,17 @@ $(function() {
       $('ul.layerswitcher a').removeClass('active');
       $(this).addClass('active');
       layer = $(this).attr('data-layer');
+     
+     // The stuff below changes the crime info at the bottom of the left pane.
+      var crimez = $(e.currentTarget).attr('data-name')
+      $('.crimeinfo').hide();
+      $('#'+crimez).show();
 
       // To change the height of the bar in the sidebar we assign 
       // and id here and change it in the css
       var borderBar = $(this).attr('data-name');
       $('.border-bar').attr('id', borderBar);
       buildMap(layer);
+   	 
 	});
 });

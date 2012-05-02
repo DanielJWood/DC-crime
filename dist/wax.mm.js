@@ -3655,6 +3655,7 @@ wax.mm = wax.mm || {};
 // chaining-style controls.
 wax.mm.zoomer = function(map) {
     var zoomin = document.createElement('a');
+    // Dan Wood: can change back to "+"
     zoomin.innerHTML = '+';
     zoomin.href = '#';
     zoomin.className = 'zoomer zoomin';
@@ -3667,6 +3668,7 @@ wax.mm.zoomer = function(map) {
     }, false);
 
     var zoomout = document.createElement('a');
+    // Dan Wood: can change back to "-"
     zoomout.innerHTML = '-';
     zoomout.href = '#';
     zoomout.className = 'zoomer zoomout';
