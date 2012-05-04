@@ -100,7 +100,7 @@ a:hover {
 }
 
 #leftpane {
-	height:100% ;
+  bottom:0;
 	position: absolute;
 	left:0;
 	top:70px;
@@ -143,8 +143,8 @@ a:hover {
 
 .crimeinfo {
 	top:370px;
+	bottom:0;
 	border-top:2px solid rgba(255,247,188,1);
-	height:100%;
 	background-color:#353534;
 	background-color:rgba(2,2,0,0.3);	
   }
