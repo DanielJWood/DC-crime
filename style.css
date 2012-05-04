@@ -141,12 +141,17 @@ a:hover {
 	border-bottom:2px solid rgb(255,247,188);
   }
 
+
 .crimeinfo {
-	top:370px;
-	bottom:0;
-	border-top:2px solid rgba(255,247,188,1);
+	top:0;
+	position:relative;
+	height:150px;
+	width:100%;
+	left:0;
+	border-top:2px solid rgb(255,247,188);
+	border-bottom:2px solid rgb(255,247,188);
 	background-color:#353534;
-	background-color:rgba(2,2,0,0.3);	
+	background-color:rgba(2,2,0,0.3);
   }
 
 /*border bar*/
@@ -157,6 +162,7 @@ a:hover {
   position: absolute;
   left: 230px;
   top: 35px;
+  z-index:30;
   }
 #assault.border-bar   { top: 70px; height: 260px; }
 #arson.border-bar     { top: 105px; height: 225px;}
