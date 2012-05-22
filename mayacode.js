@@ -9,7 +9,6 @@ function buildMap(layer) {
 
 	$('.wax-legend').remove(); //the legend stacks with the build so needs to be removed first.
 	$('a.zoomer').hide(); //i remove the zoomer because it is transparent, and stacks
-	$('a.wax-tooltip').remove(); //this doesn't work...
   
 
 	interaction = wax.mm.interaction()
