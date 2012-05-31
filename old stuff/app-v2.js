@@ -3,41 +3,33 @@ var m, interaction;
 var layer = 'danwood.crime10hex';
 var legend;
 
+//This builds the map, adds the legend, zoomer buttons, interactivity
 function buildMap(layer) {
 	wax.tilejson(url + layer + '.jsonp', function(tilejson) {
-	  //if m is not defined create it, if it is already defined go to else
-    if (!m) { 
-      m = new MM.Map('mymap', new wax.mm.connector(tilejson));
+	var m = new MM.Map('mymap', new wax.mm.connector(tilejson));
 
-      interaction = wax.mm.interaction()
-        .map(m)
-        .tilejson(tilejson)
-        .on(wax.tooltip().animate(true).parent(m.parent).events());
+	$('.wax-legend').remove(); //the legend stacks with the build so needs to be removed first.
+	$('a.zoomer').hide(); //i remove the zoomer because it is transparent, and stacks
 
-      wax.mm.zoomer(m).appendTo(m.parent);
-
-      m.setCenterZoom({ lat: 38.901, lon: -77.078 }, 12);
-
-      legend = wax.mm.legend(m, tilejson).appendTo(m.parent);      
-
-    } else {
-      $('.wax-legend').remove();
-      m.setLayerAt(0, new wax.mm.connector(tilejson));
-      interaction.tilejson(tilejson);
-      legend.content(tilejson.legend || '');
-      wax.mm.legend(m, tilejson).appendTo(m.parent);
-      attribution.content(tilejson.attribution || '');
-    }
+	interaction = wax.mm.interaction()
+	  .map(m)
+	  .tilejson(tilejson)
+	  .on(wax.tooltip().animate(true).parent(m.parent).events());
+	  
+	 wax.mm.zoomer(m).appendTo(m.parent);
+	 m.setCenterZoom({ lat: 38.901, lon: -77.078 }, 12);
+	wax.mm.legend(m, tilejson).appendTo(m.parent);
+	
 	});
 }
 
 //could also be $(function() {
 $(document).ready(function() { 
-	buildMap(layer);
-	//The following 2 lines creates the INITIAL crimeinfo data
+	buildMap(layer); //builds the initial map before any layerswitching
+//The following 2 lines creates the initial crimeinfo data
  	$('.crimeinfo').hide();
  	$('#all').show();
-
+ 	
 
 	$('ul.layerswitcher a').click(function (e) {
       e.preventDefault();

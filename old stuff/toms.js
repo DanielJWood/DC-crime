@@ -17,11 +17,10 @@ function buildMap(layer) {
       wax.mm.zoomer(m).appendTo(m.parent);
 
       m.setCenterZoom({ lat: 38.901, lon: -77.078 }, 12);
-
-      legend = wax.mm.legend(m, tilejson).appendTo(m.parent);      
+      legend = wax.mm.legend(m, tilejson).appendTo(m.parent);      //crea
 
     } else {
-      $('.wax-legend').remove();
+      $('.wax-legend').remove();  /
       m.setLayerAt(0, new wax.mm.connector(tilejson));
       interaction.tilejson(tilejson);
       legend.content(tilejson.legend || '');

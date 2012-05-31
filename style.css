@@ -42,6 +42,7 @@ p {
 a {
   color: #C98233;
   text-decoration: none;
+/*  padding-top:5px;*/
   }
 a:hover {
   text-decoration: none;
@@ -198,6 +199,7 @@ a:hover {
   text-decoration:none;
   position:absolute;
   color: rgb(255,247,188);
+  /*color: rgb(60,90,152);*/
   line-height:23px;
   font-size:20px;
   z-index:99999;
@@ -219,6 +221,7 @@ a:hover {
   text-decoration:none;
   position:absolute;
   color: rgb(255,247,188);
+  /*color: #9AE4E8; twitter color*/
   line-height:23px;
   font-size:20px;
   z-index:99999;
