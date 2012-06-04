@@ -20,7 +20,7 @@ a.zoomer {
   	background-color:rgba(2,2,0,0.7);
   }
 
-  a.zoomin {
+  a.zoomout {
     left:275px;
     top: 105px;
     -webkit-border-radius: 3px;
@@ -30,7 +30,7 @@ a.zoomer {
     border-bottom-left-radius: 10px;
     }
 
-  a.zoomout {
+  a.zoomin {
     left:305px;
 	  top:105px;
 	  -webkit-border-radius: 3px;
@@ -67,6 +67,7 @@ a.zoomer {
 
 .wax-legends .wax-legend {
   max-width:275px;
+/*  min-width:275px;*/
   padding:10px;
   background-color:rgb(2,2,0);
   background-color:rgba(2,2,0,0.7);
@@ -87,7 +88,7 @@ border-bottom-left-radius: 5px;
   -webkit-user-select:auto;
   right:10px;
   top:80px;
-  max-width:300px;
+  width:250px;
   opacity:1;
   -webkit-transition:opacity 150ms;
   -moz-transition:opacity 150ms;
