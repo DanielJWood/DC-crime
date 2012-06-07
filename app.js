@@ -1,6 +1,6 @@
 var url = 'http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,';
 var m, interaction;
-var layer = 'danwood.dc-crime-all';
+var layer = 'danwood.dc-crime-10-dc';
 var legend;
 
 function buildMap(layer) {
