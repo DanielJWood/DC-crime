@@ -16,7 +16,7 @@ function buildMap(layer) {
 
       wax.mm.zoomer(m).appendTo(m.parent);
 
-      m.setCenterZoom({ lat: 38.9079, lon: -77.0368 }, 14);
+      m.setCenterZoom({ lat: 38.9091, lon: -77.0184 }, 13);
 
       legend = wax.mm.legend(m, tilejson).appendTo(m.parent);      
 

@@ -34,6 +34,7 @@ h3 {
 }
 
 p {
+    padding-bottom:7px;
     font-size:16px;
     color: rgb(255,247,188);
     ;
@@ -58,6 +59,10 @@ a:hover {
 	padding-left:20px;
 	padding-top:15px;
 	padding-right: 20px;
+}
+
+.inner span {
+  color:#FC4E2A;
 }
 
 .toptext {
