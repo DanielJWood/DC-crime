@@ -1,0 +1,27 @@
+$(document).ready(function() { 
+	buildMap(layer);
+	//The following 2 lines creates the INITIAL crimeinfo data
+ 	$('.crimeinfo').hide();
+ 	$('#all').show();
+
+
+	$('ul.layerswitcher a').click(function (e) {
+      e.preventDefault();
+      $('ul.layerswitcher a').removeClass('active');
+      $(this).addClass('active');
+      layer = $(this).attr('data-layer');
+     
+     // The stuff below changes the crime info at the bottom of the left pane.
+      var crimez = $(e.currentTarget).attr('data-name');
+      $('.crimeinfo').hide();
+      $('#'+crimez).show();
+
+      // To change the height of the bar in the sidebar we assign 
+      // and id here and change it in the css
+      var borderBar = $(this).attr('data-name');
+      $('.border-bar').attr('id', borderBar);
+      buildMap(layer); 
+      //the last thing it does is build the map^^
+   	 
+	});
+});

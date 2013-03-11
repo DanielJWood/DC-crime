@@ -1,4 +1,4 @@
-var url = 'http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,';
+var url = 'http://api.tiles.mapbox.com/v3/danwood.map-5xoed384,';
 var m, interaction;
 var layer = 'danwood.dc-crime-10-c';
 var legend;
